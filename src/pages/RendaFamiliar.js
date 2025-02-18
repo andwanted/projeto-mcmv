@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles.css"; // Importa o estilo global
+import ProgressBar from '../ProgressBar';  // Importe o componente da barra de progresso
 
 const RendaFamiliar = () => {
   const navigate = useNavigate();
@@ -12,12 +13,18 @@ const RendaFamiliar = () => {
   const [resideCidade, setResideCidade] = useState("");
 
   const avancar = () => {
-    navigate("/financiamento");
+    navigate("/financiamento"); // Navega para a próxima página
   };
+
+  // Configuração da barra de progresso
+  const stepsCompleted = 2; // Estamos na segunda etapa
+  const totalSteps = 3; // Total de etapas (páginas)
 
   return (
     <div className="container">
-      {/* Imagem no topo */}
+      {/* Barra de Progresso */}
+      <ProgressBar stepsCompleted={stepsCompleted} totalSteps={totalSteps} />
+
       <div className="image-container">
         <img src={require("../img/mcmv.png")} alt="Imagem de Capa" className="page-image" />
       </div>

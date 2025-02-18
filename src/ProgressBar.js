@@ -1,13 +1,19 @@
-import React from 'react';
-import './ProgressBar.css'; // Importar o CSS para a barra de progresso
+import React from "react";
 
-const ProgressBar = ({ progress }) => {
+const ProgressBar = ({ stepsCompleted, totalSteps }) => {
+  const progress = (stepsCompleted / totalSteps) * 100;  // Calculando o progresso
+
   return (
-    <div className="progress-bar-container">
-      <div
-        className="progress-bar"
-        style={{ width: `${progress}%` }}
-      ></div>
+    <div className="progress-container" style={{ width: "100%", height: "10px", backgroundColor: "#eee", borderRadius: "5px" }}>
+      <div 
+        className="progress-bar" 
+        style={{
+          width: `${progress}%`,
+          height: "100%",
+          backgroundColor: '#4caf50',
+          borderRadius: '5px'
+        }}
+      />
     </div>
   );
 };

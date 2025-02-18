@@ -1,21 +1,29 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles.css"; // Importa o estilo global
+import ProgressBar from '../ProgressBar';  // Importe o componente da barra de progresso
 
-const FinanciamentoAtivo = () => {
+const Financiamento = () => {
   const navigate = useNavigate();
 
+  // Estados (não precisam ser alterados, apenas exemplo)
   const [possuiFinanciamento, setPossuiFinanciamento] = useState("");
   const [trabalhaRegistrado, setTrabalhaRegistrado] = useState("");
   const [restricaoNome, setRestricaoNome] = useState("");
 
   const avancar = () => {
-    navigate("/resultado");
+    navigate("/resultado"); // Navega para o resultado final
   };
+
+  // Configuração da barra de progresso
+  const stepsCompleted = 3; // Estamos na terceira e última etapa
+  const totalSteps = 3; // Total de etapas (páginas)
 
   return (
     <div className="container">
-      {/* Imagem no topo */}
+      {/* Barra de Progresso */}
+      <ProgressBar stepsCompleted={stepsCompleted} totalSteps={totalSteps} />
+
       <div className="image-container">
         <img src={require("../img/mcmv.png")} alt="Imagem de Capa" className="page-image" />
       </div>
@@ -55,4 +63,4 @@ const FinanciamentoAtivo = () => {
   );
 };
 
-export default FinanciamentoAtivo;
+export default Financiamento;

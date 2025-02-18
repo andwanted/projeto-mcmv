@@ -1,27 +1,32 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles.css"; // Importa o estilo global
+import ProgressBar from '../ProgressBar';  // Importe o componente da barra de progresso
 
 const InformacoesPessoais = () => {
   const navigate = useNavigate();
 
-  // Estados para armazenar os valores dos inputs
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
   const [endereco, setEndereco] = useState("");
   const [email, setEmail] = useState("");
   const [estadoCivil, setEstadoCivil] = useState("");
 
-  // Função para avançar para a próxima página
   const avancar = () => {
-    navigate("/renda");
+    navigate("/renda"); // Navega para a próxima página
   };
+
+  // Configuração da barra de progresso
+  const stepsCompleted = 1; // Estamos na primeira etapa
+  const totalSteps = 3; // Total de etapas (páginas)
 
   return (
     <div className="container">
-      {/* Imagem no topo */}
+      {/* Barra de Progresso */}
+      <ProgressBar stepsCompleted={stepsCompleted} totalSteps={totalSteps} />
+
       <div className="image-container">
-      <img src={require("../img/mcmv.png")} alt="Imagem" className="page-image" />
+        <img src={require("../img/mcmv.png")} alt="Imagem" className="page-image" />
       </div>
 
       <h2>Informações Pessoais</h2>
