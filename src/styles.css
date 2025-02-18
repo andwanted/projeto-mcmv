@@ -1,0 +1,124 @@
+/* ============================= */
+/* Estilos globais da aplicação */
+/* ============================= */
+
+body {
+    background-color: #0066B3;  /* Fundo azul vibrante para melhor contraste */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Utiliza flexbox para centralizar o conteúdo */
+    justify-content: center;  /* Centraliza o conteúdo horizontalmente */
+    align-items: center;  /* Centraliza o conteúdo verticalmente */
+    min-height: 100vh;  /* Garante que a página ocupe toda a altura da tela */
+}
+
+/* ============================= */
+/* Estilos do título principal  */
+/* ============================= */
+
+h2 {
+    text-align: center;
+    color: #ffffff; /* Mantém a visibilidade do título sobre o fundo azul */
+    font-size: 26px; /* Tamanho ajustado para maior destaque */
+    font-weight: bold; /* Dá mais presença ao título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* ============================= */
+/* Estilos para o container principal */
+/* ============================= */
+
+.container {
+    background: #ffffff;  /* Fundo branco para maior contraste e legibilidade */
+    padding: 30px;
+    border-radius: 10px; /* Bordas arredondadas para um design mais suave */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para efeito elevado */
+    max-width: 500px;  /* Limita a largura do formulário para melhor alinhamento */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Garante que os elementos fiquem empilhados */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+}
+
+/* ============================= */
+/* Estilos do botão principal */
+/* ============================= */
+
+button {
+    background-color: rgb(0, 75, 90); /* Cor azul escuro para maior contraste */
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Maior área de clique para melhor experiência do usuário */
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+    border-radius: 8px; /* Bordas mais arredondadas para um design mais moderno */
+    width: 100%; /* O botão ocupa toda a largura do container */
+    text-align: center;
+    font-weight: bold; /* Dá mais destaque ao texto */
+}
+
+button:hover {
+    background-color: #F2C300; /* Amarelo vibrante para indicar interatividade */
+    color: #333; /* Texto escurecido para contraste */
+    transform: scale(1.05); /* Efeito leve de crescimento ao passar o mouse */
+}
+
+/* ============================= */
+/* Estilos dos inputs e selects */
+/* ============================= */
+
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px; /* Espaçamento uniforme entre os campos */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Bordas arredondadas para um design mais moderno */
+    width: 100%; /* Ocupa toda a largura do container */
+    box-sizing: border-box; /* Evita que a largura ultrapasse o container */
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    border-color: #0066B3; /* Realce ao focar no campo */
+    outline: none; /* Remove a borda padrão do navegador */
+}
+
+/* ============================= */
+/* Layout flexível para inputs */
+/* ============================= */
+
+.input-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide os inputs em duas colunas */
+    gap: 15px; /* Reduz o espaçamento entre os elementos */
+    width: 100%; /* Garante que ocupe a largura do container */
+}
+
+.input-container input,
+.input-container select {
+    width: 100%; /* Garante que os inputs se ajustem corretamente */
+}
+
+/* ============================= */
+/* Estilos para a imagem */
+/* ============================= */
+
+.page-image {
+    width: 50%; /* Ajuste para um tamanho proporcional */
+    max-width: 180px; /* Tamanho máximo para evitar imagens grandes demais */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem seja exibida corretamente */
+    margin: 20px auto; /* Centraliza a imagem */
+}
+
+/* ============================= */
+/* Centralização da imagem */
+/* ============================= */
+
+.image-container {
+    text-align: center; /* Garante que a imagem fique centralizada */
+    margin-bottom: 15px;
+}
