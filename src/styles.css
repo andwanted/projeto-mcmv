@@ -122,3 +122,45 @@ input:focus, select:focus {
     text-align: center; /* Garante que a imagem fique centralizada */
     margin-bottom: 15px;
 }
+
+
+/* Definições para a animação de "Splash" */
+.splash-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: green;
+    opacity: 0.6;
+    transform: translate(-50%, -50%);
+    animation: splashAnimation 1s ease-out forwards;
+  }
+  
+  .splash-circle.amarelo {
+    background-color: yellow;
+  }
+  
+  .splash-circle.vermelho {
+    background-color: red;
+  }
+  
+  @keyframes splashAnimation {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 0.6;
+    }
+    50% {
+      width: 100px;
+      height: 100px;
+      opacity: 0.4;
+    }
+    100% {
+      width: 150px;
+      height: 150px;
+      opacity: 0;
+    }
+  }
+  

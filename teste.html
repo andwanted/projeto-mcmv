@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testando Animação</title>
+  <style>
+    /* Animação de splash */
+    .splash-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: green;
+      opacity: 0.6;
+      transform: translate(-50%, -50%);
+      animation: splashAnimation 1s ease-out forwards;
+    }
+
+    @keyframes splashAnimation {
+      0% {
+        width: 0;
+        height: 0;
+        opacity: 0.6;
+      }
+      50% {
+        width: 100px;
+        height: 100px;
+        opacity: 0.4;
+      }
+      100% {
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="splash-circle"></div>
+</body>
+</html>
